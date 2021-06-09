@@ -3,10 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3d Landing Page</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>3D Portfolio</title>
   </head>
   <body>
-    <canvas class="webgl"></canvas>
-    <script type="module" src="/main.js"></script>
+    <header class="px-3 py-5 shadow">
+      <nav class="flex justify-between">
+        <div class="text-xl flex">
+          <img
+            src="./images/logo.png"
+            alt="logo"
+            width="25"
+            height="25"
+            class="mr-3"
+          />
+          Thomas Mark
+        </div>
+        <ul class="flex items-center justify-around w-1/2 text-gray-700">
+          <li class="cursor-pointer hover:text-yellow-600">Works</li>
+          <li class="cursor-pointer hover:text-yellow-600">About</li>
+          <li class="cursor-pointer hover:text-yellow-600">Services</li>
+          <li class="cursor-pointer hover:text-yellow-600">Contact me</li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <canvas class="webgl"></canvas> -->
+    <!--  <script type="module" src="/main.js"></script> -->
   </body>
 </html>
