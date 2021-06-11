@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
+
 body {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -6,4 +8,43 @@ body {
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  --purple: #99154e;
+  --yellow: #ffc93c;
+  --white: #fff;
+  --black: #000;
+  font-family: "Lato", sans-serif;
+}
+
+.bg-purple {
+  background: var(--purple);
+}
+
+.bg-yellow {
+  background: var(--yellow);
+}
+
+.button {
+  background: var(--purple);
+  color: var(--white);
+  position: relative;
+}
+
+.button:hover span {
+  margin-right: 18px;
+}
+.button span {
+  transition: 100ms ease-in;
+}
+
+.button:hover .btn-img {
+  opacity: 1;
+}
+
+.button .btn-img {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: 100ms ease-in;
+  opacity: 0;
 }

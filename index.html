@@ -7,10 +7,11 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>3D Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Mason Burton</title>
   </head>
   <body>
-    <header class="px-3 py-5 shadow">
+    <header class="px-3 py-5 shadow fixed inset-x-0 z-10 bg-white">
       <nav class="flex justify-between">
         <div class="text-xl flex">
           <img
@@ -30,28 +31,55 @@
         </ul>
       </nav>
     </header>
-    <div class="flex justify-between min-h-screen bg-gray-100">
-      <div class="px-5 py-32 flex-1 flex flex-col justify-between min-h-screen">
+    <div class="flex justify-between min-h-screen pt-12">
+      <div class="px-8 py-32 flex-1 flex flex-col justify-between min-h-screen">
         <div>
-          <h1 class="text-6xl mb-3">3D Artist</h1>
-          <p class="text-3xl">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-            enim sapiente error consequatur quos ex consectetur et numquam
-            tempore iste!
+          <h1 class="text-6xl mb-6 font-black">3D Artist</h1>
+          <p class="text-xl mb-6 text-gray-700 leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            maiores doloribus consectetur corporis! Exercitationem fugiat quo
+            sequi atque quidem nesciunt necessitatibus molestias magnam,
+            recusandae praesentium corrupti, delectus, dolor reprehenderit
+            voluptas.
           </p>
+          <button class="py-2 px-6 bg-gray-500 rounded button text-xl flex">
+            <span> Let's work </span>
+            <img
+              src="./images/handshake.svg"
+              alt="handshake"
+              width="25"
+              height="25"
+              class="btn-img"
+            />
+          </button>
         </div>
-        <p class="text-xl">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, enim
-          sapiente error consequatur quos ex consectetur et numquam tempore
-          iste!
-        </p>
+        <div class="py-5">
+          <h3 class="text-xl mb-2">Heading</h3>
+          <ul class="flex">
+            <li class="text-md text-gray-600">Test</li>
+            <li class="mx-5 text-md text-gray-600">Test</li>
+            <li class="text-md text-gray-600">Test</li>
+          </ul>
+        </div>
       </div>
-      <div class="px-3 flex-1 relative overflow-hidden">
-        <img src="./images/man.png" alt="man" class="w-full absolute" />
+      <div class="px-8 w-1/2 canvas-container">
+        <canvas class="webgl"></canvas>
       </div>
     </div>
-    <div class="min-h-screen"></div>
+    <div class="py-12 min-h-screen">
+      <div class="flex flex-1">
+        <div class="py-6 px-3">
+          <h3 class="text-2xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+            aliquam!
+          </h3>
+        </div>
+        <div class="flex-1">
+          <h1 class="text-2xl">Text</h1>
+        </div>
+      </div>
+    </div>
     <!-- <canvas class="webgl"></canvas> -->
-    <!--  <script type="module" src="/main.js"></script> -->
+    <script type="module" src="/main.js"></script>
   </body>
 </html>

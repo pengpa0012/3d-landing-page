@@ -5,7 +5,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // Canvas
 
 const canvas = document.querySelector("canvas.webgl");
-
+const canvasContainer = document.querySelector(".canvas-container");
+console.log(canvasContainer);
 // Scene
 
 const scene = new THREE.Scene();
@@ -36,6 +37,21 @@ function addStar() {
 
 Array(200).fill().forEach(addStar);
 
+// Moon
+
+const moonTexture = new THREE.TextureLoader().load("./images/moon.jpeg");
+const normalTexture = new THREE.TextureLoader().load("./images/normal.jpeg");
+
+const sphere = new THREE.Mesh(
+  new THREE.SphereBufferGeometry(0.5, 64, 64),
+  new THREE.MeshStandardMaterial({
+    normalMap: normalTexture,
+    map: moonTexture,
+    color: 0xc1c1c1,
+  })
+);
+scene.add(sphere);
+
 // Lights
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
@@ -46,14 +62,14 @@ scene.add(ambientLight);
  * Sizes
  */
 const sizes = {
-  width: window.innerWidth,
-  height: window.innerHeight,
+  width: canvasContainer.offsetWidth,
+  height: canvasContainer.offsetHeight,
 };
 
 window.addEventListener("resize", () => {
   // Update sizes
-  sizes.width = window.innerWidth;
-  sizes.height = window.innerHeight;
+  sizes.width = canvasContainer.offsetWidth;
+  sizes.height = canvasContainer.offsetHeight;
 
   // Update camera
   camera.aspect = sizes.width / sizes.height;
@@ -88,6 +104,7 @@ controls.enableDamping = true;
  */
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
+  alpha: true,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -100,6 +117,9 @@ const clock = new THREE.Clock();
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
+
+  // Update moon
+  sphere.rotation.y = 0.2 * elapsedTime;
 
   // Update Orbital Controls
   controls.update();
