@@ -27,13 +27,18 @@ body {
   background: var(--purple);
   color: var(--white);
   position: relative;
+  transition: 150ms ease-in;
+}
+
+.button:hover {
+  background: #851244;
 }
 
 .button:hover span {
   margin-right: 18px;
 }
 .button span {
-  transition: 100ms ease-in;
+  transition: 150ms ease-in;
 }
 
 .button:hover .btn-img {
