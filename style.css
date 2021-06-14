@@ -15,12 +15,53 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+.position-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .bg-purple {
   background: var(--purple);
 }
 
 .bg-yellow {
   background: var(--yellow);
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 0;
+}
+
+.d-grid img {
+  width: 100%;
+}
+
+.d-grid img:nth-child(2),
+.d-grid img:nth-child(4),
+.d-grid img:nth-child(6) {
+  transform: translate(-10%, 50%);
+}
+
+.d-grid img:nth-child(3) {
+  z-index: 2;
+}
+
+.d-grid img:nth-child(4) {
+  z-index: -1;
+}
+
+.d-grid img:nth-child(5) {
+  z-index: -2;
+}
+
+.d-grid img:nth-child(6) {
+  z-index: -3;
 }
 
 .button {
