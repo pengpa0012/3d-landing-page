@@ -15,9 +15,34 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.position-center {
-  left: 50%;
-  transform: translateX(-50%);
+@media (min-width: 1024px) {
+  .position-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(30%);
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
 }
 
 .bg-purple {
@@ -49,19 +74,19 @@ body {
 }
 
 .d-grid img:nth-child(3) {
-  z-index: 2;
+  z-index: 5;
 }
 
 .d-grid img:nth-child(4) {
-  z-index: -1;
+  z-index: 4;
 }
 
 .d-grid img:nth-child(5) {
-  z-index: -2;
+  z-index: 3;
 }
 
 .d-grid img:nth-child(6) {
-  z-index: -3;
+  z-index: 2;
 }
 
 .button {

@@ -7,7 +7,7 @@
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Mason Burton</title>
   </head>
   <body>
@@ -23,15 +23,22 @@
           />
           Mason Burton
         </div>
-        <ul class="flex items-center justify-end w-1/2 text-gray-700">
+        <ul class="nav-links flex items-center justify-end w-1/2 text-gray-700">
           <li class="cursor-pointer hover:text-yellow-600">Works</li>
           <li class="cursor-pointer hover:text-yellow-600 ml-5">About</li>
           <li class="cursor-pointer hover:text-yellow-600 ml-5">Services</li>
           <li class="cursor-pointer hover:text-yellow-600 ml-5">Contact me</li>
         </ul>
+        <img
+          src="./images/burger.svg"
+          alt="burger"
+          width="25"
+          height="25"
+          class="block md:hidden cursor-pointer nav-burger"
+        />
       </nav>
     </header>
-    <div class="flex justify-between min-h-screen pt-12">
+    <div class="flex flex-col lg:flex-row justify-between min-h-screen pt-12">
       <div class="px-8 py-32 flex-1 flex flex-col justify-between min-h-screen">
         <div>
           <h1 class="text-7xl mb-6 font-black">3D MODELER</h1>
@@ -62,13 +69,23 @@
           </ul>
         </div>
       </div>
-      <div class="px-8 w-1/2 canvas-container">
+      <div class="px-8 hidden lg:block w-1/2 canvas-container">
         <canvas class="webgl"></canvas>
       </div>
     </div>
     <div class="py-12 pt-48 min-h-screen">
-      <div class="flex">
-        <div class="py-12 w-1/2 bg-purple px-6 flex flex-col justify-center">
+      <div class="flex flex-col-reverse lg:flex-row">
+        <div
+          class="
+            py-12
+            w-full
+            lg:w-1/2
+            bg-purple
+            px-6
+            flex flex-col
+            justify-center
+          "
+        >
           <div class="mb-24">
             <h3 class="text-6xl mb-5 text-white">ABOUT ME</h3>
             <p class="text-xl text-gray-300">
@@ -86,19 +103,28 @@
             </p>
           </div>
         </div>
-        <div class="w-1/2 px-6 bg-gray-100 relative d-flex">
+        <div class="w-full lg:w-1/2 px-6 bg-gray-100 relative d-flex">
           <img
             src="./images/man.png"
             alt="man"
-            class="w-full max-w-xl absolute bottom-0 position-center"
+            class="
+              mx-auto
+              w-1/2
+              lg:w-full
+              max-w-xl
+              block
+              lg:absolute
+              bottom-0
+              position-center
+            "
           />
         </div>
       </div>
     </div>
-    <div class="py-12 px-6 pb-24">
+    <div class="py-12 px-6 pb-32">
       <h2 class="text-7xl mb-12 text-purple">MY WORKS</h2>
-      <div class="flex">
-        <div class="py-5 w-1/2">
+      <div class="flex flex-col lg:flex-row">
+        <div class="py-5 w-full lg:w-1/2">
           <div class="mb-12">
             <h3 class="text-4xl mb-5">Heading</h3>
             <p class="text-xl text-gray-500">
@@ -118,7 +144,7 @@
             </p>
           </div>
         </div>
-        <div class="py-5 w-1/2 d-grid">
+        <div class="py-5 w-full lg:w-1/2 d-grid">
           <img src="./images/1.jpg" alt="img" />
           <img src="./images/2.jpg" alt="img" />
           <img src="./images/3.jpg" alt="img" />
@@ -128,6 +154,61 @@
         </div>
       </div>
     </div>
-    <script type="module" src="/main.js"></script>
+    <div class="py-24 px-6 bg-purple">
+      <div class="text-center text-white max-w-6xl mx-auto">
+        <h2 class="text-6xl mb-5">Heading</h2>
+        <p class="text-xl">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nulla
+          dolore, quidem vitae minus ducimus, quam odit laboriosam fugiat
+          incidunt assumenda dolorem dolores harum fugit, animi quia facere!
+          Aspernatur, rerum.
+        </p>
+      </div>
+    </div>
+    <footer class="py-12 px-6 bg-gray-900 text-white">
+      <div class="flex flex-col md:flex-row justify-between">
+        <h1 class="px-2 mb-12 md:mb-0">Logo</h1>
+        <div class="flex flex-col md:flex-row w-full md:w-1/2 justify-between">
+          <div class="px-2 mb-5 md:mb-0">
+            <h3 class="text-xl mb-2">Heading</h3>
+            <ul class="list-unstyled">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+          <div class="px-2 mb-5 md:mb-0">
+            <h3 class="text-xl mb-2">Heading</h3>
+            <ul class="list-unstyled">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+          <div class="px-2 mb-5 md:mb-0">
+            <h3 class="text-xl mb-2">Heading</h3>
+            <ul class="list-unstyled">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+          <div class="px-2 mb-5 md:mb-0">
+            <h3 class="text-xl mb-2">Heading</h3>
+            <ul class="list-unstyled">
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+              <li>Link</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
