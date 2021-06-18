@@ -6,7 +6,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 const canvas = document.querySelector("canvas.webgl");
 const canvasContainer = document.querySelector(".canvas-container");
-console.log(canvasContainer);
 // Scene
 
 const scene = new THREE.Scene();
@@ -20,7 +19,7 @@ document.addEventListener("mousemove", (e) => {
 }); */
 
 // Objects
-
+/* 
 function addStar() {
   const star = new THREE.Mesh(
     new THREE.SphereGeometry(0.1, 24, 24),
@@ -35,28 +34,22 @@ function addStar() {
   scene.add(star);
 }
 
-Array(200).fill().forEach(addStar);
+Array(200).fill().forEach(addStar); */
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load("./images/moon.jpeg");
-const normalTexture = new THREE.TextureLoader().load("./images/normal.jpeg");
-
-const sphere = new THREE.Mesh(
-  new THREE.SphereBufferGeometry(0.5, 64, 64),
-  new THREE.MeshStandardMaterial({
-    normalMap: normalTexture,
-    map: moonTexture,
-    color: 0xc1c1c1,
+const dirtTexture = new THREE.TextureLoader().load("./images/texture.jpg");
+const box = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({
+    map: dirtTexture,
   })
 );
-scene.add(sphere);
+scene.add(box);
 
 // Lights
-
-const ambientLight = new THREE.AmbientLight(0xffffff);
-
-scene.add(ambientLight);
+const directionalLight = new THREE.DirectionalLight(0x000000, 0.5);
+scene.add(directionalLight);
 
 /**
  * Sizes
@@ -90,9 +83,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.x = 0;
-camera.position.y = 0;
-camera.position.z = 2;
+camera.position.set(0, 0, 2.5);
 scene.add(camera);
 
 // Controls
@@ -119,7 +110,8 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   // Update moon
-  sphere.rotation.y = 0.2 * elapsedTime;
+  box.rotation.y = 0.2 * elapsedTime;
+  box.rotation.x = 0.1 * elapsedTime;
 
   // Update Orbital Controls
   controls.update();
