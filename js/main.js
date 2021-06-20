@@ -36,7 +36,7 @@ function addStar() {
 
 Array(200).fill().forEach(addStar); */
 
-// Moon
+// Box
 
 const dirtTexture = new THREE.TextureLoader().load("./images/texture.jpg");
 const box = new THREE.Mesh(
@@ -46,10 +46,6 @@ const box = new THREE.Mesh(
   })
 );
 scene.add(box);
-
-// Lights
-const directionalLight = new THREE.DirectionalLight(0x000000, 0.5);
-scene.add(directionalLight);
 
 /**
  * Sizes
