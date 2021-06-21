@@ -68,6 +68,18 @@ body {
   color: var(--purple);
 }
 
+.social-icon {
+  width: 25px;
+  height: 25px;
+  color: var(--purple);
+  cursor: pointer;
+  transition: 250ms ease-in;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
 .speech-bubble-ds {
   background: #efefef;
   border: 1px solid #a7a7a7;
