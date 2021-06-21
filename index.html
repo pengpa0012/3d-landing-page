@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="px-3 py-5 shadow fixed inset-x-0 z-10 bg-white">
-      <nav class="flex justify-between">
+      <nav class="flex justify-between container-wrap">
         <div class="text-xl flex">
           <img
             src="./images/logo.png"
@@ -70,7 +70,16 @@
         />
       </nav>
     </header>
-    <div class="flex flex-col lg:flex-row justify-between min-h-screen pt-12">
+    <div
+      class="
+        flex flex-col
+        lg:flex-row
+        justify-between
+        min-h-screen
+        pt-12
+        container-wrap
+      "
+    >
       <div class="px-8 py-32 flex-1 flex flex-col justify-between min-h-screen">
         <div>
           <h1 class="text-5xl sm:text-7xl mb-6 font-black">3D MODELER</h1>
@@ -116,20 +125,10 @@
         <canvas class="webgl"></canvas>
       </div>
     </div>
-    <div class="py-12 pt-48 min-h-screen">
-      <div class="flex flex-col-reverse lg:flex-row">
-        <div
-          class="
-            py-12
-            w-full
-            lg:w-1/2
-            bg-purple
-            px-6
-            flex flex-col
-            justify-center
-          "
-        >
-          <div class="mb-24">
+    <div class="bg-purple">
+      <div class="flex flex-col-reverse lg:flex-row container-wrap">
+        <div class="py-32 w-full lg:w-1/2 px-6 flex flex-col items-center">
+          <div class="pb-12">
             <h3 class="text-6xl mb-5 text-white">ABOUT ME</h3>
             <p class="text-xl text-gray-300">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -137,7 +136,7 @@
               nesciunt rem, aliquid deserunt sequi laborum debitis id!
             </p>
           </div>
-          <div class="mb-24">
+          <div class="pb-12">
             <h3 class="text-6xl mb-5 text-white">EXPERIENCES</h3>
             <p class="text-xl text-gray-300">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -146,7 +145,7 @@
             </p>
           </div>
         </div>
-        <div class="w-full lg:w-1/2 px-6 bg-gray-100 relative d-flex">
+        <div class="w-full lg:w-1/2 px-6 relative d-flex">
           <img
             src="./images/man.png"
             alt="man"
@@ -155,7 +154,7 @@
         </div>
       </div>
     </div>
-    <div class="py-12 px-6 pb-32">
+    <div class="py-12 px-6 pb-32 container-wrap">
       <h2 class="text-7xl mb-12 text-purple">MY WORKS</h2>
       <div class="flex flex-col lg:flex-row">
         <div class="py-5 w-full lg:w-1/2">
@@ -243,7 +242,7 @@
       </div>
     </div>
     <div class="py-24 px-6 bg-purple">
-      <div class="text-center text-white max-w-6xl mx-auto">
+      <div class="text-center text-white container-wrap">
         <h2 class="text-6xl mb-5">Heading</h2>
         <p class="text-xl">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio nulla
@@ -255,100 +254,102 @@
       </div>
     </div>
     <footer class="py-12 px-6 bg-gray-900 text-white">
-      <div class="flex flex-col md:flex-row justify-between">
-        <div class="px-2 mb-12 md:mb-0 flex items-start">
-          <img
-            src="./images/logo.png"
-            alt="logo"
-            width="25"
-            height="25"
-            class="mr-2"
-          />
-          <h1 class="text-xl text-white">Mason Burton</h1>
+      <div class="container-wrap">
+        <div class="flex flex-col md:flex-row justify-between">
+          <div class="px-2 mb-12 md:mb-0 flex items-start">
+            <img
+              src="./images/logo.png"
+              alt="logo"
+              width="25"
+              height="25"
+              class="mr-2"
+            />
+            <h1 class="text-xl text-white">Mason Burton</h1>
+          </div>
+          <div
+            class="
+              flex flex-col
+              md:flex-row
+              w-full
+              md:w-1/2
+              justify-between
+              pb-12
+            "
+          >
+            <div class="px-2 mb-5 md:mb-0">
+              <h3 class="text-xl mb-2">Projects</h3>
+              <ul class="list-unstyled">
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+              </ul>
+            </div>
+            <div class="px-2 mb-5 md:mb-0">
+              <h3 class="text-xl mb-2">Blog</h3>
+              <ul class="list-unstyled">
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+              </ul>
+            </div>
+            <div class="px-2 mb-5 md:mb-0">
+              <h3 class="text-xl mb-2">Partners</h3>
+              <ul class="list-unstyled">
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+              </ul>
+            </div>
+            <div class="px-2 mb-5 md:mb-0">
+              <h3 class="text-xl mb-2">Socials</h3>
+              <ul class="list-unstyled">
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+                <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
+                  Link
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div
-          class="
-            flex flex-col
-            md:flex-row
-            w-full
-            md:w-1/2
-            justify-between
-            pb-12
-          "
-        >
-          <div class="px-2 mb-5 md:mb-0">
-            <h3 class="text-xl mb-2">Projects</h3>
-            <ul class="list-unstyled">
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-            </ul>
-          </div>
-          <div class="px-2 mb-5 md:mb-0">
-            <h3 class="text-xl mb-2">Blog</h3>
-            <ul class="list-unstyled">
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-            </ul>
-          </div>
-          <div class="px-2 mb-5 md:mb-0">
-            <h3 class="text-xl mb-2">Partners</h3>
-            <ul class="list-unstyled">
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-            </ul>
-          </div>
-          <div class="px-2 mb-5 md:mb-0">
-            <h3 class="text-xl mb-2">Socials</h3>
-            <ul class="list-unstyled">
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-              <li class="text-gray-400 hover:text-gray-200 cursor-pointer">
-                Link
-              </li>
-            </ul>
-          </div>
-        </div>
+        <p class="text-lg text-gray-400">
+          &copy; Lorem ipsum dolor sit amet. 2021
+        </p>
       </div>
-      <p class="text-lg text-gray-400">
-        &copy; Lorem ipsum dolor sit amet. 2021
-      </p>
     </footer>
     <script type="module" src="./js/main.js"></script>
     <script src="./js/script.js"></script>

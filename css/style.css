@@ -51,6 +51,11 @@ body {
   }
 }
 
+.container-wrap {
+  max-width: 1440px;
+  margin: auto;
+}
+
 .bg-purple {
   background: var(--purple);
 }
