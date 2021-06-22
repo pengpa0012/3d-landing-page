@@ -51,6 +51,10 @@ body {
   }
 }
 
+.nav-links li:hover {
+  color: var(--purple);
+}
+
 .container-wrap {
   max-width: 1440px;
   margin: auto;
