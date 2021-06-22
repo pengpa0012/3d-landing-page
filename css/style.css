@@ -187,10 +187,10 @@ body {
   .container-wrap .content1::before {
     content: "";
     position: absolute;
-    bottom: -96px;
-    left: 45%;
+    bottom: 0;
+    left: 50%;
     width: 100%;
-    height: 100%;
+    height: 700px;
     background: #262626;
     transform: skewY(-47deg);
     transform-origin: bottom;
