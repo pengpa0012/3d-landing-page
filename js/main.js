@@ -38,7 +38,7 @@ Array(200).fill().forEach(addStar); */
 
 // Box
 
-const dirtTexture = new THREE.TextureLoader().load("images/texture.jpg");
+const dirtTexture = new THREE.TextureLoader().load("./images/texture.jpg");
 const box = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({
