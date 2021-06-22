@@ -1,4 +1,3 @@
-import "../css/style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
@@ -38,7 +37,9 @@ Array(200).fill().forEach(addStar); */
 
 // Box
 
-const dirtTexture = new THREE.TextureLoader().load("./images/texture.jpg");
+const dirtTexture = new THREE.TextureLoader().load(
+  "https://images.unsplash.com/photo-1542732056-648731297c97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+);
 const box = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({
