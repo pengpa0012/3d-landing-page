@@ -68,6 +68,44 @@ body {
   background: var(--yellow);
 }
 
+.bg-gradient-1 {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(5, 12, 22, 1) 47%,
+      rgba(0, 0, 0, 0.3380019244025735) 88%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../images/character.jpg") no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.bg-gradient-2 {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(5, 12, 22, 1) 47%,
+      rgba(0, 0, 0, 0.3380019244025735) 88%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../images/rigging.jpg") no-repeat;
+  background-position: right;
+}
+
+.bg-gradient-3 {
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(5, 12, 22, 1) 47%,
+      rgba(0, 0, 0, 0.3380019244025735) 88%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url("../images/animation.jpg") no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+
 .text-purple {
   color: var(--purple);
 }
